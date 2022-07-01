@@ -2,5 +2,14 @@
   "name": "vue-async-tree",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/erdemefe07/vue-async-tree.git"
+  },
+  "keywords": [
+    "vue",
+    "async",
+    "tree"
+  ]
 }
