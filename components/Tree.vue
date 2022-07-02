@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="vue-async-tree-wrapper">
     <TreeItem v-for="(item, index) in data" :key="index" :model="item">
       <template v-for="(_, name) in $slots" #[name]="slotData">
         <slot :name="name" v-bind="slotData || {}" />
@@ -11,7 +11,7 @@
 <script setup>
 import TreeItem from "./TreeItem.vue";
 
-import { ref, reactive, provide } from "vue";
+import { ref, reactive, provide, readonly } from "vue";
 const props = defineProps({
   fetchData: Function,
   options: Object,
@@ -66,7 +66,13 @@ defineExpose({
   select,
   expand,
   collapse,
-  selectedItem,
+  selectedItem: readonly(selectedItem),
   loadingIds,
 });
 </script>
+
+<style>
+.vue-async-tree-wrapper {
+  padding: 0px;
+}
+</style>

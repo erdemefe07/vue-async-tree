@@ -118,6 +118,10 @@ Model is item
 Theese are deafults. If you want to change you must use `!important`.
 
 ```css
+.vue-async-tree-wrapper {
+  padding: 0px;
+}
+
 .vue-async-tree-item {
   cursor: pointer;
   line-height: 1.5;
