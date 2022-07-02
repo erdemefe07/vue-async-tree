@@ -113,6 +113,16 @@ Model is item
 </template>
 ```
 
+## Exposes
+
+| key          | value             |
+| :----------- | ----------------- |
+| select       | function(item)    |
+| expand       | function(item)    |
+| collapse     | function(item)    |
+| selectedItem | item              |
+| loadingIds   | Set (id of items) |
+
 ## Styles
 
 Theese are deafults. If you want to change you must use `!important`.

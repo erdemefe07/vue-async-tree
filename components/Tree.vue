@@ -11,7 +11,7 @@
 <script setup>
 import TreeItem from "./TreeItem.vue";
 
-import { ref, reactive, provide, readonly } from "vue";
+import { ref, reactive, provide } from "vue";
 const props = defineProps({
   fetchData: Function,
   options: Object,
@@ -66,7 +66,7 @@ defineExpose({
   select,
   expand,
   collapse,
-  selectedItem: readonly(selectedItem),
+  selectedItem,
   loadingIds,
 });
 </script>
