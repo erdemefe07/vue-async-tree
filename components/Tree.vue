@@ -29,9 +29,10 @@ const expandedIds = reactive(new Set());
 const loadingIds = reactive(new Set());
 
 async function getChilds(item) {
+  const isExpandable = props.expandable(item)
   const isArray = Array.isArray(item[children]);
-  if (!isArray) item[children] = [];
-  else if (item[children].length > 0)
+  if (!isArray && isExpandable) item[children] = [];
+  else if (isArray && item[children].length > 0)
     return;
 
   loadingIds.add(item[id]);

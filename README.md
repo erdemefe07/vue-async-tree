@@ -34,6 +34,7 @@ yarn add vue-async-tree
     return item.type === "folder";
   }
 
+  //runs when item is expandable or item's children key is not array
   async function fetchData(item) {
     // item is Proxy so can edit as you want
     //  {
